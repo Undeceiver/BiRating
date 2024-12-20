@@ -1,0 +1,62 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsopn,amscd,amsthm,amssymb,xypic,rotating}
+\usepackage{thmtools}
+\usepackage[utf8]{inputenc}
+\usepackage{changebar}
+%\usepackage[dvinames]{xcolor}
+\usepackage{mathtools}
+
+\input{macros.tex}
+
+\title{Beat Saber leaderboard-based rating algorithm - Principles and consequences}
+%\author{Juan Casanova}
+
+%\noannotations
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+Todo
+
+\section{Principles}
+
+There are some core principles about how ratings of players and/or maps should behave when new scores are added to the leaderboard. We can lay some of them out here clearly.
+
+\begin{itemize}
+
+\item \itemtitle{Time independence} If the same set of scores are set on the same set of maps, the leaderboard ratings of all maps and players will be the same, regardless of the order in which those scores were set over time.
+
+\item \itemtitle{Proportionality} The quality of a score is higher the harder the map it is set on is considered.
+
+\item \itemtitle{Positivity of personal scores} When a player sets a new score, the rating of that player should never be reduced, regardless of the quality of the score.
+
+\item \itemtitle{Non-positivity of others' scores} When a player sets a new score, none of the ratings of other players should be increased, regardless of the quality of the score.
+
+\item \itemtitle{Improvement} In any given state, if a player sets a score that is better than all other scores that player has, then their rating must strictly increase.
+
+
+\end{itemize}
+
+\section{Consequences}
+
+From the above principles, there are some constraints that any leaderboard-based rating system that satisfies them must fulfill.
+
+\begin{theorem}[Top scores cannot be ignored]
+Any leaderboard-based rating system that respects the principles of {\emph{time independence}}, {\emph{proportionality}}, {\emph{positivity of personal scores}}, {\emph{non-positivity of others' scores}}, and {\emph{improvement}}; cannot ignore any score that is better than all the scores that are not ignored of the same player or map.
+\end{theorem}
+
+\begin{proof}
+We first prove that we cannot ignore any top scores of a player, then we prove that we cannot ignore any top scores in a map.\\
+
+Assume that there was a player that had a high score that was ignored, while other, lower scores, were considered in their rating. By {\emph{time independence}}, it does not matter in what order those scores were set over time. Therefore, we can assume without loss of generality that the best score was set last. But then, by {\emph{improvement}}, since that score is better than all other scores set thus far, their rating must have improved. Therefore, that score is not ignored in the final result.\\
+
+Now let's prove that we cannot ignore top scores in a map. Assume that there was a map that had a high score that was ignored, while other, lower scores, were considered in the rating of the map and players. By {\emph{time independence}}
+\end{proof}
+
+\end{document}
