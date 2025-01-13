@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsopn,amscd,amsthm,amssymb,xypic,rotating}
+\usepackage{thmtools}
+\usepackage[utf8]{inputenc}
+\usepackage{changebar}
+%\usepackage[dvinames]{xcolor}
+\usepackage{mathtools}
+
+\input{macros.tex}
+
+\title{BiRating - Iterative averaging on a bipartite graph of Beat Saber player skills and map difficulties}
+\author{Juan Casanova}
+
+\begin{document}
+
+\maketitle
+
+Abstract here
+
+\section{Introduction}
+
+Unsupervised learning, iterative algorithms in graphs. Differences with this.
+
+Beat Saber, maps, players, scores, BeatLeader. Previous star algorithms. Differences with this (e.g. supervised vs unsupervised).
+
+\section{Algorithm description}
+
+Basic principles, what the algorithm does, and why.
+Talk about the error here.
+
+Subsection on convergence.
+
+\section{Data preparation and implementation}
+
+Implementation details, data preparation, what data I have, what did I do.
+Talk about hyperparameter search
+
+\section{Results}
+
+Actual results, direct discussion and its meaning. Talk about convergence again.
+
+Evaluation of results compared to star rating algorithm and community discussion.
+
+\section{Limitations}
+
+Inherent algorithm limitations: Convergence.
+
+Data limitations: Data quality, need scores, abuse, not suitable for live system, which scores to pick, irregularity of scores.
+
+Application limitations: Multidimensionality of skill and difficulty, curve shape matters.
+
+\section{Related and future work}
+
+ALS and other more advanced algorithms.
+
+Mention existing approaches again.
+
+Pattern recognition with neural networks: Supervised data issue, and what is authoritative. Feature selection. Data preprocessing. Curve shape estimation. 
+
+\section{Conclusion}
+
+Interesting approach. Why it is interesting compared to other approaches. Works to some degree. Limitations. More work needed. Helped identify some core difficulties with the approach.
+
+\end{document}
