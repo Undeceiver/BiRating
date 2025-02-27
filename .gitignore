@@ -7,3 +7,9 @@ BL_DB_3_17s.bacpac
 *.bacpac
 BiRating.synctex.gz
 export.json
+BiRating.aux
+BiRating.bbl
+BiRating.blg
+BiRating.log
+BiRating.out
+BiRating.toc
