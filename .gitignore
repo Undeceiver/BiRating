@@ -6,3 +6,4 @@ BL_DB_3_17s.bacpac
 .ipynb_checkpoints
 *.bacpac
 BiRating.synctex.gz
+export.json
